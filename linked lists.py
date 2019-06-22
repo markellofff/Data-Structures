@@ -133,6 +133,9 @@ class Linked_list:
         prev_node.next = cur_node.next
         return
 
+    
+# Driver Code
+# Following comments are the output of that particular line
 my_list = Linked_list()
 first = my_list.head = Node(12)
 second = first.next = Node(15)
