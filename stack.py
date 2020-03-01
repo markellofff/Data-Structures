@@ -28,15 +28,18 @@ class Stack:
     def print_stack(self):
         return self.items
 
+    def peek(self):
+        return self.items[-1]
 
-s = Stack()
 
-s.push('A')
-s.push('B')
-s.push('C')
-s.push('D')
-print(s.stack_length())
-print(s.print_stack())
-s.pop()
-print(s.stack_length())
-print(s.print_stack())
+# s = Stack()
+#
+# s.push('A')
+# s.push('B')
+# s.push('C')
+# s.push('D')
+# print(s.stack_length())
+# print(s.print_stack())
+# s.pop()
+# print(s.stack_length())
+# print(s.print_stack())
