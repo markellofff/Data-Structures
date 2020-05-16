@@ -53,4 +53,30 @@ def is_balanced_paren(paren_string):
         return False
 
 
-print(is_balanced_paren(str))
+# print(is_balanced_paren(str))
+
+"""
+Another good way for solving this problem
+"""
+
+
+def matched_parenthesis(str):
+    s = Stack()
+    for char in str:
+        if char in ['(', '{', '[']:
+            s.push(char)
+        else:
+            if s.stack_length() == 0:
+                return 'Empty Stack'
+            else:
+                top = s.peek()
+                s.pop()
+                if (top == '(' and char != ')') or (top == '{' and char != '}') or (top == '[' and char != ']'):
+                    return False
+    if s.stack_length() == 0:
+        return True
+
+
+test_string = '[{()}]'  # for balanced
+unbalanced = '[{()}]}'
+print(matched_parenthesis(test_string))
